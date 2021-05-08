@@ -15,6 +15,9 @@ class SmoothieForm extends Component {
       notes: "",
     };
   }
+  render() {
+    return <div></div>;
+  }
 }
 
 export default SmoothieForm;
