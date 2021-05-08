@@ -29,6 +29,10 @@ class ViewSmoothies extends Component {
     });
   }
   //
+
+  render() {
+    return <div></div>;
+  }
 }
 
 export default ViewSmoothies;
