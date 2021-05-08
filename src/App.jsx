@@ -28,7 +28,7 @@ function App() {
             </li>
             <li className="list-inline-item mr-5">
               <Link className="customLink" to="/SmoothieForm">
-                Create New
+                Create New!
               </Link>
             </li>
           </ul>
