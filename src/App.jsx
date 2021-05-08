@@ -16,13 +16,9 @@ function App() {
       <Router>
         <div className="navBar">
           <ul className="list-inline">
-            <Link className="customLink" to="/">
-              <li className="customLink list-inline-item brand mr-3">
-                Navi's Smoothies
-              </li>
-            </Link>
+            <li className="title">Navi's Smoothies</li>
             <li className="list-inline-item mr-3">
-              <Link className="customLink" to="/viewSmoothies">
+              <Link className="customLink" to="/">
                 View All
               </Link>
             </li>
