@@ -1,12 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;700&display=swap");
+@font-face {
+  font-family: "Cabin";
+  src: url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+}
 
 //color palette
 $base-color: rgb(17, 18, 18);
-$primaryBlack: #22292F;
-$secondaryBlack: #3D4B52;
-$lightGrey: #DAE1E7;
-$superLightGrey: #F1F5F8;
-$primaryBlue: #4386FC;
+$primaryBlack: #22292f;
+$secondaryBlack: #3d4b52;
+$lightGrey: #dae1e7;
+$superLightGrey: #f1f5f8;
+$primaryBlue: #4386fc;
 
 * {
   margin: 0;
@@ -17,9 +24,18 @@ $primaryBlue: #4386FC;
 }
 
 .parentContainer {
-  font-family: alarmClock;
+  font-family: "Oswald", sans-serif;
   min-height: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .customLink {
