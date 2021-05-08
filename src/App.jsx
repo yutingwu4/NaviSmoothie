@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="parentContainer">
       <Router>
-        <div className="row ml-3">
+        <div className="navBar">
           <ul className="list-inline">
             <Link className="customLink" to="/">
               <li className="customLink list-inline-item brand mr-3">
@@ -28,15 +28,20 @@ function App() {
             </li>
             <li className="list-inline-item mr-5">
               <Link className="customLink" to="/SmoothieForm">
-                Create New!
+                Create New
               </Link>
             </li>
           </ul>
         </div>
+        <h1>Welcome to the New You</h1>
         <div className="search">
           <form className="search-form">
-            <input className="search-bar" type="text" />
-            <button className="search-button" type="submit" placeholder="Where's mah smoothie?">
+            <input
+              className="search-bar"
+              type="text"
+              placeholder="Where's mah smoothie?"
+            />
+            <button className="search-button" type="submit">
               Search
             </button>
           </form>
