@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import SmoothieForm from "./components/SmoothieForm";
 import ViewSmoothies from "./components/ViewSmoothies";
@@ -32,6 +32,14 @@ function App() {
               </Link>
             </li>
           </ul>
+        </div>
+        <div className="search">
+          <form className="search-form">
+            <input className="search-bar" type="text" />
+            <button className="search-button" type="submit" placeholder="Where's mah smoothie?">
+              Search
+            </button>
+          </form>
         </div>
         <div className="switchContainer">
           <Switch>
