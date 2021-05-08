@@ -15,6 +15,7 @@ function SmoothieCard() {
         <p className="card-text">
           <span className="detailLabel">Ingredients</span>
         </p>
+        <img src={} alt="smoothie-pic"></img>
       </div>
     </div>
   );
