@@ -60,6 +60,15 @@ li {
   margin: auto;
 }
 
+.search-bar {
+  width: 80vw;
+  max-width: 35rem;
+  height: 2.6rem;
+  border-radius: 90rem;
+  border: 0.75 solid lightgray;
+  // box-shadow: 0px 0px 5px 5px $lightGrey;
+}
+
 .customLink {
   list-style-type: none; //removes bullets
   // text-decoration: none !important;
@@ -69,4 +78,28 @@ li {
 
 .title {
   margin: 0;
+}
+
+.smoothie-card {
+  display: grid;
+}
+
+@media screen and (min-width: 1400px) {
+  .smoothie-card {
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 1400px;
+    width: 400;
+    margin: 2rem 0;
+    max-height: 7rem;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 839px) {
+  .smoothie-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

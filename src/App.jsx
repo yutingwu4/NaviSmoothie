@@ -29,15 +29,15 @@ function App() {
             </li>
           </ul>
         </div>
-        <h1 className="slogan">Welcome to the New You</h1>
+        <h1 className="slogan mt-5">Welcome to the New You</h1>
 
         <form className="search-form">
           <input
-            className="search-bar"
+            className="search-bar mt-5 ml-4"
             type="text"
             placeholder="Where's mah smoothie?"
           />
-          <button className="search-button" type="submit">
+          <button type="button" class="btn btn-primary ml-4 mb-1">
             Search
           </button>
         </form>
