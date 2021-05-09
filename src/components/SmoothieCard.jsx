@@ -4,20 +4,21 @@
  */
 
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-function SmoothieCard() {
+function SmoothieCard({ name, image }) {
   return (
-    <div className="smoothieCard">
-      <div className="card-body">
-        <h5 className="card-title">
-          <span className="detailLabel">Smoothie Name</span>
-        </h5>
-        <p className="card-text">
-          <span className="detailLabel">Ingredients</span>
-        </p>
-        <img src={} alt="smoothie-pic"></img>
-      </div>
-    </div>
+    <Switch>
+      <Route>
+        <div className="smoothie-card">
+          <h5 className="card-title">
+            <span className="detailLabel">{name}</span>
+          </h5>
+
+          <img className="smoothie_img" src={image} alt="smoothie-pic"></img>
+        </div>
+      </Route>
+    </Switch>
   );
 }
 
