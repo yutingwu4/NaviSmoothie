@@ -15,33 +15,33 @@ function App() {
     <div className="parentContainer">
       <Router>
         <div className="navBar">
-          <ul className="list-inline">
-            <li className="title">Navi's Smoothies</li>
-            <li className="list-inline-item mr-3">
+          <li className="customLink title">Navi's Smoothies</li>
+          <ul className="navBarLinks">
+            <li className="list-inline-item">
               <Link className="customLink" to="/">
                 View All
               </Link>
             </li>
-            <li className="list-inline-item mr-5">
+            <li className="list-inline-item">
               <Link className="customLink" to="/SmoothieForm">
                 Create New
               </Link>
             </li>
           </ul>
         </div>
-        <h1>Welcome to the New You</h1>
-        <div className="search">
-          <form className="search-form">
-            <input
-              className="search-bar"
-              type="text"
-              placeholder="Where's mah smoothie?"
-            />
-            <button className="search-button" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
+        <h1 className="slogan">Welcome to the New You</h1>
+
+        <form className="search-form">
+          <input
+            className="search-bar"
+            type="text"
+            placeholder="Where's mah smoothie?"
+          />
+          <button className="search-button" type="submit">
+            Search
+          </button>
+        </form>
+
         <div className="switchContainer">
           <Switch>
             <Route path="/viewSmoothies" component={ViewSmoothies} />
