@@ -5,8 +5,7 @@
 
 import React from "react";
 
-function SmoothieDetail({ ingredients, instructions, notes, closePopUp, id }) {
-  //render close button inside return below, needs onClick prop -> invokes closePopUp
+function SmoothieDetail({ ingredients, instructions, notes }) {
   return (
     <div className="smoothie-detail">
       <h5 className="smoothie-detail-ing">Ingredients:</h5>
@@ -20,21 +19,5 @@ function SmoothieDetail({ ingredients, instructions, notes, closePopUp, id }) {
     </div>
   );
 }
-
-// function SmoothieDetail({ name, ingredients }) {
-//   return (
-//     <div className="cardDetail">
-//       <p className="card-title">
-//         <h5>{name}</h5>
-//         <button>Edit</button>
-//       </p>
-//       <p className="card-text">
-//         <span className="detailLabel">{ingredients}</span>
-//         <button>Update Card</button>
-//       </p>
-//       <button>Delete Card</button>
-//     </div>
-//   );
-// }
 
 export default SmoothieDetail;
