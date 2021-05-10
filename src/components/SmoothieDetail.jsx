@@ -5,18 +5,18 @@
 
 import React from "react";
 
-function SmoothieDetail({
-  name,
-  ingredients,
-  instructions,
-  notes,
-  closePopUp,
-  id,
-}) {
+function SmoothieDetail({ ingredients, instructions, notes, closePopUp, id }) {
   //render close button inside return below, needs onClick prop -> invokes closePopUp
   return (
     <div className="smoothie-detail">
-      `Hello ${id} and ${name}!`
+      <h5 className="smoothie-detail-ing">Ingredients:</h5>
+      <p>{ingredients}</p>
+
+      <h5 className="smoothie-detail-inst">Instructions:</h5>
+      <p>{instructions}</p>
+
+      <h5 className="smoothie-detail-notes">Notes:</h5>
+      <p>{notes}</p>
     </div>
   );
 }
