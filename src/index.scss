@@ -20,7 +20,7 @@ $primaryBlue: #4386fc;
   padding: 0;
   box-sizing: border-box;
   // background-color: $back-color;
-  color: $base-color;
+  // color: $base-color;
 }
 
 .parentContainer {
@@ -34,7 +34,7 @@ $primaryBlue: #4386fc;
 }
 
 .navBar {
-  background-color: red;
+  // background-color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -51,22 +51,8 @@ h1 {
 }
 
 li {
-  background-color: green;
+  // background-color: green;
   padding: 1rem;
-}
-
-.slogan,
-.search-form {
-  margin: auto;
-}
-
-.search-bar {
-  width: 80vw;
-  max-width: 35rem;
-  height: 2.6rem;
-  border-radius: 90rem;
-  border: 0.75 solid lightgray;
-  // box-shadow: 0px 0px 5px 5px $lightGrey;
 }
 
 .customLink {
@@ -74,6 +60,11 @@ li {
   // text-decoration: none !important;
   font-size: 2rem;
   color: $base-color;
+}
+
+.slogan,
+.search-form {
+  margin: auto;
 }
 
 .title {
@@ -91,7 +82,8 @@ li {
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 1400px;
-    width: 400;
+    width: 400px;
+    height: 400px;
     margin: 2rem 0;
     max-height: 7rem;
     overflow-y: auto;
@@ -102,4 +94,18 @@ li {
   .smoothie-card {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.smoothie-img {
+  width: 250px;
+  height: 250px;
+}
+
+.search-bar {
+  width: 80vw;
+  max-width: 35rem;
+  height: 2.6rem;
+  border-radius: 90rem;
+  border: 0.75 solid lightgray !important;
+  // box-shadow: 0px 0px 5px 5px $lightGrey;
 }
