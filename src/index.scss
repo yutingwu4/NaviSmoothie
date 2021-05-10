@@ -38,6 +38,7 @@ $primaryBlue: #4386fc;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: $secondaryBlack;
 }
 
 h1 {
@@ -52,14 +53,13 @@ h1 {
 
 li {
   // background-color: green;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
 }
 
 .customLink {
   list-style-type: none; //removes bullets
-  // text-decoration: none !important;
   font-size: 2rem;
-  color: $base-color;
+  color: white;
 }
 
 .slogan,
@@ -72,28 +72,44 @@ li {
 }
 
 .smoothie-card {
-  display: grid;
+  height: 250px;
+  width: 250px;
+  box-shadow: 0px 0px 5px 5px $lightGrey !important;
+  margin: 6rem 2rem 3rem 2rem;
+  border-radius: 2rem;
+  background: white;
+  color: $base-color;
+}
+
+.view-smoothies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 1400px) {
-  .smoothie-card {
-    grid-template-columns: repeat(3, 1fr);
+  .view-smoothies {
+    grid-template-columns: repeat(2, 1fr);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 1400px;
-    width: 400px;
-    height: 400px;
     margin: 2rem 0;
-    max-height: 7rem;
     overflow-y: auto;
   }
 }
 
-@media screen and (min-width: 560px) and (max-width: 839px) {
-  .smoothie-card {
-    grid-template-columns: repeat(2, 1fr);
-  }
+// @media screen and (min-width: 560px) and (max-width: 839px) {
+//   .view-smoothies {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+// }
+
+.card-title {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .smoothie-img {
@@ -108,4 +124,19 @@ li {
   border-radius: 90rem;
   border: 0.75 solid lightgray !important;
   // box-shadow: 0px 0px 5px 5px $lightGrey;
+}
+
+.search-bar::placeholder {
+  margin-left: 2rem;
+}
+
+.smoothie-detail {
+  background-color: blue;
+  z-index: 1000;
+  position: fixed;
+  font-size: 1rem;
+  border: 1px solid red;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 1rem;
 }
