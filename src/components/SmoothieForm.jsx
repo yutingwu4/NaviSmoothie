@@ -3,11 +3,9 @@
  * @user Component that allows user to create a new smoothie.
  */
 
-import React, { useState, useHistory } from "react";
+import React, { useState } from "react";
 
-function SmoothieForm() {
-  const history = useHistory();
-
+function SmoothieForm(props) {
   //establish state for input fields
   const [name, setName] = useState("");
   const [ingredients, setIngredients] = useState([]);
@@ -15,13 +13,34 @@ function SmoothieForm() {
   const [notes, setNotes] = useState("");
 
   //onChange event handler to update state when key is pressed in input field
-  // const addText = (e) => {};
+  //by default HTML/JS manually re-renders entire page whenever form is submitted, React only re-renders components that changed
+
+  const submitForm = (event) => {
+    event.preventDefault();
+
+    const cardObj = {
+      name,
+      ingredients,
+      instructions,
+      notes,
+    };
+
+    props.addCard(cardObj);
+
+    alert("Card successfully added! Click on View All to see new card.");
+
+    //clear input fields
+    setName("");
+    setIngredients([]);
+    setInstructions("");
+    setNotes("");
+  };
 
   return (
     <div className="row justify-content-center mt-5">
       <div className="col-6">
         <form
-          // onSubmit={}
+          onSubmit={submitForm}
           style={{ display: "flex", flexDirection: "column" }}
         >
           <label>
@@ -83,7 +102,11 @@ function SmoothieForm() {
           <button className="btn btn-primary" type="submit">
             Add Smoothie
           </button>
-          <button className="btn btn-secondary" type="submit">
+          <button
+            className="btn btn-secondary mt-2
+           "
+            type="reset"
+          >
             Cancel
           </button>
         </form>
