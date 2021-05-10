@@ -23,14 +23,14 @@ function App() {
             type="text"
             placeholder="Where's mah smoothie?"
           />
-          <button type="button" class="btn btn-primary ml-4 mb-1">
+          <button type="button" className="btn btn-primary ml-4 mb-1">
             Search
           </button>
         </form>
 
         <div className="switchContainer">
           <Switch>
-            <Route path="/viewSmoothies" component={ViewSmoothies} />
+            <Route exact path="/" component={ViewSmoothies} />
             <Route path="/SmoothieForm" component={SmoothieForm} />
           </Switch>
         </div>
