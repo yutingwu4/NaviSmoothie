@@ -78,6 +78,9 @@ li {
   margin: 6rem 2rem 3rem 2rem;
   border-radius: 2rem;
   background: white;
+}
+
+.card-title {
   color: $base-color;
 }
 
@@ -130,13 +133,17 @@ li {
   margin-left: 2rem;
 }
 
-.smoothie-detail {
-  background-color: blue;
-  z-index: 1000;
-  position: fixed;
-  font-size: 1rem;
-  border: 1px solid red;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 1rem;
-}
+// .smoothie-detail {
+//   background-color: white;
+//   z-index: 1000;
+//   position: fixed;
+//   font-size: 1rem;
+//   height: 55%;
+//   width: 40%;
+//   border-radius: 2rem;
+//   left: 30%;
+//   top: 30%;
+//   min-width: fit-content;
+//   box-shadow: 0 0 10px;
+//   padding: 2rem;
+// }
