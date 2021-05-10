@@ -8,69 +8,122 @@ import SmoothieDetail from "./SmoothieDetail";
 import { Modal, Button } from "react-bootstrap";
 // import { Switch, Route } from "react-router-dom";
 
-function SmoothieCard({ name, ingredients, instructions, notes, id }) {
+function SmoothieCard(props) {
+  //update state for edit mode
+  const [tempName, setTempName] = useState(props.name);
+  const [tempIngredients, setTempIngredients] = useState(props.ingredients);
+  const [tempInstructions, setTempInstructions] = useState("");
+  const [tempNotes, setTempNotes] = useState("");
+
+  //React bootstrap modal hooks
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  const [showPopup, setShowPopup] = useState(false);
-
-  const popupHandler = () => {
-    if (!showPopup) setShowPopup(true);
+  //React bootstrap modal handleClicks
+  const handleClose = () => {
+    setShow(false);
+    setEditForm(false);
   };
 
-  const closePopUpHandler = () => {
-    if (showPopup) setShowPopup(false);
+  const handleShow = () => {
+    setShow(true);
+    setEditForm(false);
   };
 
-  // Pen turns into a save button
-  // Pen -> enableEdit
-  // Save -> disableEdit
-  const [enableEdit, setEnableEdit] = useState(false);
+  //in edit mode
+  const [editForm, setEditForm] = useState(false);
 
-  const enableEditHandler = () => {
-    if (!enableEdit) setEnableEdit(true);
+  //to delete card
+  const removeSmoothie = (id) => {
+    //find current card we want to delete
+    const cardObj = props.smoothies.filter((smoothie) => smoothie.id === id);
+    //confirm if we want to delete
+    if (window.confirm("Sure you want to dump this smoothie?")) {
+      props.deleteCard(cardObj);
+    }
   };
 
-  const disableEditHandler = () => {
-    if (enableEdit) setEnableEdit(false);
+  //enter edit mode
+  const editMode = () => {
+    setEditForm(true);
   };
 
-  //edit name handler
-  // When I type into the input field of the SmoothDetail,
-  // I can update Name, or Ingredients, etc. when I click save.
-  //editName, setEditName = useState({name})
-
-  //edit ingredients handler
+  //to edit card
+  const saveChanges = (id) => {
+    const cardObj = {
+      name: props.name,
+      ingredients: props.ingredients,
+      instructions: props.instructions,
+      notes: props.notes,
+    };
+    props.saveCardEdit(cardObj);
+    //exit back to view mode
+    setEditForm(false);
+  };
 
   return (
     <>
       <Button className="smoothie-card" variant="primary" onClick={handleShow}>
         <h3 className="card-title">
-          <span>{name}</span>
+          <span>{props.name}</span>
         </h3>
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Smoothie: {name}</Modal.Title>
+          {editForm ? (
+            <input
+              type="text"
+              value={tempName}
+              onChange={(e) => setTempName(e.target.value)}
+            />
+          ) : (
+            <Modal.Title>Smoothie: {props.name}</Modal.Title>
+          )}
         </Modal.Header>
         <Modal.Body>
-          <SmoothieDetail
-            ingredients={ingredients}
-            instructions={instructions}
-            notes={notes}
-            id={id}
-          />
+          {editForm ? (
+            // <EditSmoothieForm
+            //   ingredients={ingredients}
+            //   instructions={instructions}
+            //   notes={notes}
+            //   id={id}
+            //   setIngredients={}
+            //   setInstructions={}
+            //   setNotes={}
+            // />
+            <div>
+              <label>Ingredients</label>
+              <textarea
+                type="text"
+                value={tempIngredients}
+                onChange={(e) => setTempIngredients(e.target.value)}
+              />
+            </div>
+          ) : (
+            <SmoothieDetail
+              ingredients={props.ingredients}
+              instructions={props.instructions}
+              notes={props.notes}
+              id={props.id}
+            />
+          )}
         </Modal.Body>
         <Modal.Footer>
+          <Button variant="dark" className="mr-5" onClick={removeSmoothie}>
+            Delete Card
+          </Button>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Edit Card
-          </Button>
+          {editForm ? (
+            <Button variant="primary" onClick={saveChanges}>
+              Save Changes
+            </Button>
+          ) : (
+            <Button variant="primary" onClick={editMode}>
+              Edit Card
+            </Button>
+          )}
         </Modal.Footer>
       </Modal>
     </>
