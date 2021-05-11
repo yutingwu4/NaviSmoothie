@@ -90,7 +90,7 @@ function App() {
 
         <div className="switchContainer">
           <Switch>
-            <Route exact path="/NaviSmoothie">
+            <Route exact path="/NaviSmoothie/">
               <ViewSmoothies
                 smoothies={smoothies}
                 deleteCard={deleteCard}
