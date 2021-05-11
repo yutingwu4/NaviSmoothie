@@ -1,4 +1,6 @@
-# Summary
+# Smoothie Recipes Collection
+
+## Summary
 
 Webapp where smoothie enthusiasts can create and manage their own unique smoothie recipes!
 
