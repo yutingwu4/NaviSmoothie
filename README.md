@@ -60,7 +60,7 @@ Dear smoothie enthusiast, we hope you enjoy this tool.
 
 React was chosen for readablity, flexibility in rendering HTML through JSX.  It streamlines the process of creating web components on a single-page-application and leverages more efficient renderings (based on deterministic view renderings).  Given the scope of this application and the lack of asynch i/o operations, using Hooks and Router allows for reusability and related business logic to be kept in close proximity.  Although there may not be a strong separation between container and display components, the prop drilling pattern is minimized and state can be localized to singular components, which makes the code more readable and maintainable.  Hooks also provides a function for useLocalStorage that makes the use of local caches readily available and saving or updating current the state on the browser straightforward.
 
-For styling, Bootstrap was chosen for ease of use and consistent aesthetics throughout the application.  Sass has an advantage over CSS in variable assignments, which was the preferrable direction to pursue when organizing color palettes.
+For styling, Bootstrap was chosen for ease of use and having consistent aesthetics throughout the application.  Sass has an advantage over CSS in variable assignments, which was preferrable when organizing color palettes.
 
 Lastly, a couple of unit tests were performed to ensure code integrity.
 
