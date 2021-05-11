@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/NaviSmoothie/static/css/main.61d9c0da.chunk.css",
-    "main.js": "/NaviSmoothie/static/js/main.345641f9.chunk.js",
-    "main.js.map": "/NaviSmoothie/static/js/main.345641f9.chunk.js.map",
+    "main.js": "/NaviSmoothie/static/js/main.9effb93b.chunk.js",
+    "main.js.map": "/NaviSmoothie/static/js/main.9effb93b.chunk.js.map",
     "runtime-main.js": "/NaviSmoothie/static/js/runtime-main.1835074d.js",
     "runtime-main.js.map": "/NaviSmoothie/static/js/runtime-main.1835074d.js.map",
     "static/js/2.3ae6a666.chunk.js": "/NaviSmoothie/static/js/2.3ae6a666.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.1835074d.js",
     "static/js/2.3ae6a666.chunk.js",
     "static/css/main.61d9c0da.chunk.css",
-    "static/js/main.345641f9.chunk.js"
+    "static/js/main.9effb93b.chunk.js"
   ]
 }
