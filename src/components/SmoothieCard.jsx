@@ -28,9 +28,6 @@ function SmoothieCard(props) {
     setEditForm(false);
   };
 
-  //in edit mode
-  const [editForm, setEditForm] = useState(false);
-
   //to delete card
   const removeSmoothie = (id) => {
     //find current card we want to delete
@@ -41,6 +38,8 @@ function SmoothieCard(props) {
     }
   };
 
+  //in edit mode
+  const [editForm, setEditForm] = useState(false);
   //enter edit mode
   const editMode = () => {
     setEditForm(true);
