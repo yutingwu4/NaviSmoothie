@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/NaviSmoothie/static/css/main.20878358.chunk.css",
+    "main.css": "/NaviSmoothie/static/css/main.fc44d2a0.chunk.css",
     "main.js": "/NaviSmoothie/static/js/main.ba0b3d2b.chunk.js",
     "main.js.map": "/NaviSmoothie/static/js/main.ba0b3d2b.chunk.js.map",
     "runtime-main.js": "/NaviSmoothie/static/js/runtime-main.1835074d.js",
@@ -8,13 +8,13 @@
     "static/js/2.3ae6a666.chunk.js": "/NaviSmoothie/static/js/2.3ae6a666.chunk.js",
     "static/js/2.3ae6a666.chunk.js.map": "/NaviSmoothie/static/js/2.3ae6a666.chunk.js.map",
     "index.html": "/NaviSmoothie/index.html",
-    "static/css/main.20878358.chunk.css.map": "/NaviSmoothie/static/css/main.20878358.chunk.css.map",
+    "static/css/main.fc44d2a0.chunk.css.map": "/NaviSmoothie/static/css/main.fc44d2a0.chunk.css.map",
     "static/js/2.3ae6a666.chunk.js.LICENSE.txt": "/NaviSmoothie/static/js/2.3ae6a666.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1835074d.js",
     "static/js/2.3ae6a666.chunk.js",
-    "static/css/main.20878358.chunk.css",
+    "static/css/main.fc44d2a0.chunk.css",
     "static/js/main.ba0b3d2b.chunk.js"
   ]
 }
