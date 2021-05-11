@@ -7,6 +7,7 @@ import MockData from "./MockData";
 import useLocalStorage from "./UseLocalStorage";
 const { v4: uuidv4 } = require("uuid");
 
+
 /**
  * @terms
  * Link: serves similar purpose as an <a> tag.
@@ -85,12 +86,12 @@ function App() {
 
   return (
     <div className="parentContainer">
-      <Router>
+      <Router basename={window.location.pathname || ""}>
         <NavBar />
 
         <div className="switchContainer">
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/" >
               <ViewSmoothies
                 smoothies={smoothies}
                 deleteCard={deleteCard}
