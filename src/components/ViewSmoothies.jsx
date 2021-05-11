@@ -4,11 +4,7 @@
  */
 
 import React from "react";
-
 import SmoothieCard from "./SmoothieCard";
-import Colors from "./assets/Colors";
-
-console.log("Colors", Colors);
 
 function ViewSmoothies({
   smoothies,
@@ -20,8 +16,7 @@ function ViewSmoothies({
 }) {
   const renderCards = smoothies.map((smoothie, i) => (
     <SmoothieCard
-      className="view-cards"
-      key={i}
+      key={smoothie.id}
       name={smoothie.name}
       ingredients={smoothie.ingredients}
       instructions={smoothie.instructions}
@@ -33,10 +28,10 @@ function ViewSmoothies({
       setIngredients={setIngredients}
       setInstructions={setInstructions}
       setNotes={setNotes}
-      // style={{ backgroundColor: Colors[Math.floor(Math.random() * 142)] }}
     />
   ));
 
+  console.log("ViewSmoothies", smoothies);
   return (
     <div className="view-smoothies">
       <h1 className="slogan mt-5">Welcome to the New You</h1>
