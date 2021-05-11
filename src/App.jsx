@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SmoothieForm from "./components/SmoothieForm";
 import ViewSmoothies from "./components/ViewSmoothies";
 import NavBar from "./components/NavBar";
-import MockData from "./components/assets/MockData";
+import MockData from "./MockData";
+import useLocalStorage from "./UseLocalStorage";
+const { v4: uuidv4 } = require("uuid");
 
 /**
  * @terms
@@ -14,26 +16,27 @@ import MockData from "./components/assets/MockData";
 
 function App() {
   //establish state for displaying all smoothie cards
-  const [smoothies, setSmoothies] = useState(MockData);
+  const [smoothies, setSmoothies] = useLocalStorage("smoothies", MockData);
+  const [newId, setNewId] = useState(3);
 
   //to verify unique name
   const isUniqueName = (name) => {
-    //iterate array of objects, verify name does not
-
-    //array.some
-    const isUnique = smoothies.some((smoothie) => smoothie.name !== name);
-
+    //iterate array of objects, verify name is unique
+    const isUnique = !smoothies.some((smoothie) => smoothie.name === name);
     return isUnique;
   };
 
   //to add a smoothie card
   const addCard = (newCard) => {
-    if (isUniqueName(newCard.name)) {
+    if (!isUniqueName(newCard.name)) {
+      alert("This name is already taken! Please enter a unique name.");
+    } else {
       let temp = [...smoothies];
+      const newId = uuidv4();
       temp.push(newCard);
       setSmoothies(temp);
-    } else {
-      alert("This name is already taken! Please enter a unique name.");
+      setNewId(newId); //every time we add card, generate new id
+      alert("Card successfully added! Click on View All to see new card.");
     }
   };
 
@@ -45,19 +48,38 @@ function App() {
     setSmoothies(temp);
   };
 
+  //to edit name, must check unique name against itself
+  //is id same as id that we passed in?
+  const isEditNameUnique = (name, id) => {
+    //iterate array of objects, verify name is diff from current input name
+    //and other names from objects in array
+
+    const sameNameAndId = smoothies.some((card) => {
+      return card.name === name && card.id === id;
+    });
+
+    return sameNameAndId;
+  };
+
   //to edit a smoothie card; update state from global to local variable
   const saveCardEdit = (card) => {
-    if (isUniqueName(card.name)) {
+    if (isEditNameUnique(card.name, card.id) || isUniqueName(card.name)) {
       let temp = [...smoothies];
-      let indexToEdit = temp.indexOf(card);
+      //iterate thru temp to check if card.id matches temp[i].id, then indexToEdit = i
+      let indexToEdit;
+      for (let i = 0; i < temp.length; i++) {
+        if (card.id === temp[i].id) {
+          indexToEdit = i;
+        }
+      }
+      console.log("indexToEdit", indexToEdit);
       temp[indexToEdit].name = card.name;
       temp[indexToEdit].ingredients = card.ingredients;
       temp[indexToEdit].instructions = card.instructions;
       temp[indexToEdit].notes = card.notes;
-      console.log("temp", temp);
       setSmoothies(temp);
     } else {
-      alert("This name is already taken! Please enter a unique name.");
+      alert("This name is already taken! Please enter another name.");
     }
   };
 
@@ -77,7 +99,7 @@ function App() {
             </Route>
 
             <Route path="/SmoothieForm">
-              <SmoothieForm addCard={addCard} />
+              <SmoothieForm addCard={addCard} newId={newId} />
             </Route>
           </Switch>
         </div>
