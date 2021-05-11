@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SmoothieForm from "./components/SmoothieForm";
 import ViewSmoothies from "./components/ViewSmoothies";
 import NavBar from "./components/NavBar";
-import MockData from "./MockData";
-import useLocalStorage from "./UseLocalStorage";
+import MockData from "./../src/components/mockData";
+import useLocalStorage from "./../src/components/assets/useLocalStorage";
 const { v4: uuidv4 } = require("uuid");
 
 /**
