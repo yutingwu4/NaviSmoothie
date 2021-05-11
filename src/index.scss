@@ -19,8 +19,6 @@ $primaryBlue: #4386fc;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // background-color: $back-color;
-  // color: $base-color;
 }
 
 .parentContainer {
@@ -102,7 +100,7 @@ li {
   .view-smoothies {
     grid-template-columns: repeat(2, 1fr);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     min-width: 1400px;
     margin: 2rem 0;
@@ -140,17 +138,16 @@ li {
   margin-left: 2rem;
 }
 
-// .smoothie-detail {
-//   background-color: white;
-//   z-index: 1000;
-//   position: fixed;
-//   font-size: 1rem;
-//   height: 55%;
-//   width: 40%;
-//   border-radius: 2rem;
-//   left: 30%;
-//   top: 30%;
-//   min-width: fit-content;
-//   box-shadow: 0 0 10px;
-//   padding: 2rem;
-// }
+.editModal {
+  display: flex;
+  flex-direction: column;
+}
+
+.editText {
+  margin-bottom: 1rem;
+}
+
+.modalButtons {
+  display: inherit;
+  justify-content: space-between;
+}
