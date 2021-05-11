@@ -6,14 +6,13 @@
 import React, { useState } from "react";
 import SmoothieDetail from "./SmoothieDetail";
 import { Modal, Button } from "react-bootstrap";
-// import { Switch, Route } from "react-router-dom";
 
 function SmoothieCard(props) {
-  //update state for edit mode
+  //update state for edit mode; default state as existing text
   const [tempName, setTempName] = useState(props.name);
   const [tempIngredients, setTempIngredients] = useState(props.ingredients);
-  const [tempInstructions, setTempInstructions] = useState("");
-  const [tempNotes, setTempNotes] = useState("");
+  const [tempInstructions, setTempInstructions] = useState(props.instructions);
+  const [tempNotes, setTempNotes] = useState(props.notes);
 
   //React bootstrap modal hooks
   const [show, setShow] = useState(false);
@@ -50,10 +49,11 @@ function SmoothieCard(props) {
   //to edit card
   const saveChanges = (id) => {
     const cardObj = {
-      name: props.name,
-      ingredients: props.ingredients,
-      instructions: props.instructions,
-      notes: props.notes,
+      name: tempName,
+      ingredients: tempIngredients,
+      instructions: tempInstructions,
+      notes: tempNotes,
+      id: props.id,
     };
     props.saveCardEdit(cardObj);
     //exit back to view mode
@@ -75,6 +75,7 @@ function SmoothieCard(props) {
               type="text"
               value={tempName}
               onChange={(e) => setTempName(e.target.value)}
+              id={props.id}
             />
           ) : (
             <Modal.Title>Smoothie: {props.name}</Modal.Title>
@@ -82,21 +83,30 @@ function SmoothieCard(props) {
         </Modal.Header>
         <Modal.Body>
           {editForm ? (
-            // <EditSmoothieForm
-            //   ingredients={ingredients}
-            //   instructions={instructions}
-            //   notes={notes}
-            //   id={id}
-            //   setIngredients={}
-            //   setInstructions={}
-            //   setNotes={}
-            // />
-            <div>
-              <label>Ingredients</label>
+            <div className="editModal">
+              <h5>Ingredients:</h5>
               <textarea
+                className="editText"
                 type="text"
                 value={tempIngredients}
                 onChange={(e) => setTempIngredients(e.target.value)}
+                id={props.id}
+              />
+              <h5>Instructions:</h5>
+              <textarea
+                className="editText"
+                type="text"
+                value={tempInstructions}
+                onChange={(e) => setTempInstructions(e.target.value)}
+                id={props.id}
+              />
+              <h5>Notes:</h5>
+              <textarea
+                className="editText"
+                type="text"
+                value={tempNotes}
+                onChange={(e) => setTempNotes(e.target.value)}
+                id={props.id}
               />
             </div>
           ) : (
@@ -108,11 +118,16 @@ function SmoothieCard(props) {
             />
           )}
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="modalButtons">
           <Button variant="dark" className="mr-5" onClick={removeSmoothie}>
             Delete Card
           </Button>
-          <Button variant="secondary" onClick={handleClose}>
+
+          <Button
+            variant="secondary"
+            className="closeModalButton"
+            onClick={handleClose}
+          >
             Close
           </Button>
           {editForm ? (
@@ -131,22 +146,3 @@ function SmoothieCard(props) {
 }
 
 export default SmoothieCard;
-
-// <div>
-//   <button onClick={popupHandler} className="smoothie-card">
-//     <h3 className="card-title">
-//       <span className="smoothie-name">{name}</span>
-//     </h3>
-//     {showPopup ? (
-//       <SmoothieDetail
-//         name={name}
-//         ingredients={ingredients}
-//         instructions={instructions}
-//         notes={notes}
-//         closePopUp={closePopUpHandler}
-//         id={id}
-//       />
-//     ) : null}
-//     {/* <img className="smoothie_img" src={image} alt="smoothie-pic"></img> */}
-//     </button>
-//     </div>
