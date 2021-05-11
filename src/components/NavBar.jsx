@@ -13,7 +13,7 @@ function NavBar() {
       <li className="customLink title">Navi's Smoothies</li>
       <ul className="navBarLinks">
         <li className="list-inline-item">
-          <Link className="customLink" to="/NaviSmoothie/">
+          <Link className="customLink" to="/NaviSmoothie/" onClick= {() => {window.location.href="/NaviSmoothie/"}>
             View All
           </Link>
         </li>
