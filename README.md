@@ -58,11 +58,14 @@ Dear smoothie enthusiast, we hope you enjoy this tool.
 
 ## Design Considerations
 
-- styling consistency/assign variables - preferrable way to organize color palettes
-- React - single page application, deterministic view rendering
-- hooks - scope (compartmentalize state/reusability, able to interact with component lifecycle without classes, keep business logic in relatively close proximity, reduce prop drill pattern, no asynch i/o, state localized to a single component; not as strong distinction between container and display components
-- useLocalStorage hooks function - allows users to save or update current state on browser
-- Unit tests
+React was chosen for readablity, flexibility in rendering HTML through JSX.  It streamlines the process of creating web components on a single-page-application and leverages more efficient renderings (based on deterministic view renderings).  Given the scope of this application and the lack of asynch i/o operations, using Hooks and Router allows for reusability and related business logic to be kept in close proximity.  Although there may not be a strong separation between container and display components, the prop drilling pattern is minimized and state can be localized to singular components, which makes the code more readable and maintainable.  Hooks also provides a function for useLocalStorage that makes the use of local caches readily available and saving or updating current the state on the browser straightforward.
+
+For styling, Bootstrap was chosen for ease of use and consistent aesthetics throughout the application.  Sass has an advantage over CSS in variable assignments, which was the preferrable direction to pursue when organizing color palettes.
+
+Lastly, a couple of unit tests were performed to ensure code integrity.
+
+![unitTests](https://user-images.githubusercontent.com/74384669/117897750-4e098b00-b278-11eb-83ea-2ca3ad19b833.PNG)
+
 
 
 ## Future Implementations
