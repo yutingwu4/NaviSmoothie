@@ -1,4 +1,4 @@
-const Colors = [
+const colors = [
   "Black",
   "Navy",
   "DarkBlue",
