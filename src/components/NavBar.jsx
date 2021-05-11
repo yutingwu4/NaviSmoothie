@@ -12,7 +12,7 @@ function NavBar() {
       <li className="customLink title">Navi's Smoothies</li>
       <ul className="navBarLinks">
         <li className="list-inline-item">
-          <Link className="customLink" to="/">
+          <Link className="customLink" to="/NaviSmoothie/">
             View All
           </Link>
         </li>
