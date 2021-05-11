@@ -32,6 +32,7 @@ $primaryBlue: #4386fc;
 }
 
 .navBar {
+  // background-color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -49,6 +50,7 @@ h1 {
 }
 
 li {
+  // background-color: green;
   padding: 1rem 1rem 0;
 }
 
@@ -123,12 +125,12 @@ li {
   max-width: 35rem;
   height: 2.6rem;
   border-radius: 90rem;
-  border: 0.75 solid lightgray !important;
-  // box-shadow: 0px 0px 5px 5px $lightGrey;
+  border: 0.75px solid lightgray !important;
+  box-shadow: 0px 0px 5px 5px $lightGrey;
 }
 
 .search-bar::placeholder {
-  margin-left: 2rem;
+  padding-left: 1rem;
 }
 
 .editModal {
