@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://yutingwu4.github.io/NaviSmoothie/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
