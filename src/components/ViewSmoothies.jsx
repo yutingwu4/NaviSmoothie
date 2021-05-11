@@ -69,9 +69,12 @@
          />
        ));
        setRenderMatching(renderMatchCard);
+       //clear input field
+       e.target.reset();
      } else {
        alert(`Sorry, there are no matches for "${search}"!`);
        setRenderMatching(renderCards);
+       e.target.reset();
      }
    };
  
