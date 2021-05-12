@@ -49,6 +49,14 @@ Whoops!  Are you searching for a smoothie that has not been recorded?  We have f
 Dear smoothie enthusiast, we hope you enjoy this tool.
 
 
+## Design Concept
+
+UI sketch
+
+![sketch](https://user-images.githubusercontent.com/74384669/117904893-0fc79800-b287-11eb-9414-44bcd6f62c5f.PNG)
+
+
+
 ## Tech Stack
 
 1) React, React Hooks, React Router
