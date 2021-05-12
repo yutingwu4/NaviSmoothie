@@ -4,7 +4,7 @@
 
 Webapp where smoothie enthusiasts can create and manage their own unique smoothie recipes!
 
-This exercise achieves the following objectives:
+NaviSmoothie achieves the following objectives:
 - Users can create new smoothie cards with unique smoothie names
 - Users can enter ingredients, instructions, and other notes on each smoothie card
 - Users can delete a smoothie card
