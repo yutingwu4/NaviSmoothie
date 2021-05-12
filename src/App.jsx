@@ -5,7 +5,7 @@ import ViewSmoothies from "./components/ViewSmoothies";
 import NavBar from "./components/NavBar";
 import MockData from "./../src/components/mockData";
 import useLocalStorage from "./../src/components/assets/useLocalStorage";
-const { v4: uuidv4 } = require("uuid");
+// const { v4: uuidv4 } = require("uuid");
 
 /**
  * @terms
@@ -32,10 +32,10 @@ function App() {
       alert("This name is already taken! Please enter a unique name.");
     } else {
       let temp = [...smoothies];
-      const newId = uuidv4();
+      // const newId = uuidv4();
       temp.push(newCard);
       setSmoothies(temp);
-      setNewId(newId); //every time we add card, generate new id
+      setNewId(newId + 1); //every time we add card, generate new id
       alert("Card successfully added!");
       window.location.href = "/NaviSmoothie/";
     }
@@ -43,10 +43,17 @@ function App() {
 
   //to delete a smoothie card
   const deleteCard = (card) => {
+    // let temp = [...smoothies];
+    // let indexToRemove = temp.indexOf(card);
+    // temp.splice(indexToRemove, 1);
+    // setSmoothies(temp);
+
     let temp = [...smoothies];
-    let indexToRemove = temp.indexOf(card);
+    let tempMap = temp.filter((el) => el.id === card.id);
+    let indexToRemove = temp.indexOf(tempMap[0]);
     temp.splice(indexToRemove, 1);
     setSmoothies(temp);
+    window.location.href = "/NaviSmoothie/"; //refreshes the page
   };
 
   //to edit name, must check unique name against itself
@@ -78,6 +85,7 @@ function App() {
       temp[indexToEdit].instructions = card.instructions;
       temp[indexToEdit].notes = card.notes;
       setSmoothies(temp);
+      window.location.href = "/NaviSmoothie/";
     } else {
       alert("This name is already taken! Please enter another name.");
     }
@@ -95,6 +103,7 @@ function App() {
                 smoothies={smoothies}
                 deleteCard={deleteCard}
                 saveCardEdit={saveCardEdit}
+                newId={newId}
               />
             </Route>
 

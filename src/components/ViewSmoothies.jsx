@@ -21,7 +21,7 @@ function ViewSmoothies({
       ingredients={smoothie.ingredients}
       instructions={smoothie.instructions}
       notes={smoothie.notes}
-      id={i}
+      id={smoothie.id}
       deleteCard={deleteCard}
       saveCardEdit={saveCardEdit}
       smoothies={smoothies}
@@ -58,7 +58,7 @@ function ViewSmoothies({
           ingredients={card.ingredients}
           instructions={card.instructions}
           notes={card.notes}
-          id={i}
+          id={card.i}
           deleteCard={deleteCard}
           saveCardEdit={saveCardEdit}
           smoothies={smoothies}
