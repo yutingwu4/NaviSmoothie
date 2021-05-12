@@ -62,7 +62,9 @@ React was chosen for readablity, flexibility in rendering HTML through JSX.  It 
 
 For styling, Bootstrap was chosen for ease of use and having consistent aesthetics throughout the application.  Sass has an advantage over CSS in variable assignments, which was preferrable when organizing color palettes.
 
-Lastly, a couple of unit tests were performed to ensure code integrity.
+Lastly, a couple of jest/enzyme unit tests were performed to ensure code integrity.
+
+![unitTests2](https://user-images.githubusercontent.com/74384669/117900824-e99dfa00-b27e-11eb-8f6d-16031b09c43c.PNG)
 
 ![unitTests](https://user-images.githubusercontent.com/74384669/117897750-4e098b00-b278-11eb-83ea-2ca3ad19b833.PNG)
 
