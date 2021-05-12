@@ -74,4 +74,5 @@ Lastly, a couple of unit tests were performed to ensure code integrity.
 - Website mostly complies to WCAG contrast ratios, but would like to account for other web accessibility standards more thoroughly
 - Fix searching mode to allow users to edit or delete smoothie card.  State of modified data in input fields remain only in edit mode; the view does not get updated.
 - Delete functionality possibly has overlapping code; needs to be refactored.
+- Revisit id/key logic of each card.
 
