@@ -23,7 +23,7 @@ Runs the app in the development mode.\
 
 2) Open [http://localhost:3000](http://localhost:3000) to view it in the browser OR --
 
-3) Go to [https://yutingwu4.github.io/NaviSmoothie/] and play with it!
+3) Go to [https://yutingwu4.github.io/NaviSmoothie/](https://yutingwu4.github.io/NaviSmoothie/) and play with it!
 
 4) **_Navi welcomes you to a NEW YOU!_**
 
@@ -34,11 +34,11 @@ The homepage consists of a navbar, a welcome slogan, a search bar, and a few sta
 ![createNewPage](https://user-images.githubusercontent.com/74384669/117894346-03d0db80-b271-11eb-87d6-aa77d6e65aa8.PNG)
 
 
-5) Upon clicking on the smoothie cards, a window pops up displaying the smoothie name, ingredients, instructions, and notes, where users can make and save changes or delete the card altogether.  But remember!  As much as we would like to use our fave names, we can only have unique names for our smoothie recipes collection!   
+5) Upon clicking on the smoothie cards, a window pops up displaying the smoothie name, ingredients, instructions, and notes, where you can make and save changes or delete the card altogether.  But remember!  As much as we would like to use our fave names, we can only have unique names for our smoothie recipes collection!   
 
 ![uniqueName](https://user-images.githubusercontent.com/74384669/117895725-d6d1f800-b273-11eb-8387-eb447c124abb.PNG)
 
-The search bar allows you to get to your smoothie cards without scrolling down the page - a few keystrokes with a click on the "Search" button can bring up relative matches based on the input characters.  You can then select the desirable smoothie card to recall the recipe.  What was that smoothie you made last week?  Found a new fave recipe you want to keep?  No worries!  Create a new smoothie card and it will stay even after you refresh the page!
+The search bar allows you to get to your smoothie cards without scrolling down the page - a few keystrokes with a click on the "Search" button can bring up relative matches based on the input characters.  You can then select the desirable smoothie card to recall the recipe.  What was that smoothie you made last week?  Found a new fave recipe that you want to keep?  No worries!  Create a new smoothie card and it will stay even after you refresh the page!
 
 ![searchBar](https://user-images.githubusercontent.com/74384669/117895863-231d3800-b274-11eb-9f28-7bc520880d46.PNG)
 
