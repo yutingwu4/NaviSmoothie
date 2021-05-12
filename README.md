@@ -38,7 +38,7 @@ The homepage consists of a navbar, a welcome slogan, a search bar, and a few sta
 
 ![uniqueName](https://user-images.githubusercontent.com/74384669/117895725-d6d1f800-b273-11eb-8387-eb447c124abb.PNG)
 
-The search bar allows you to get to your smoothie cards without scrolling down the page - a few keystrokes with a click on the "Search" button can bring up relative matches based on the input characters.  You can then select the desirable smoothie card to recall the recipe.  What was that smoothie you made last week?  Found a new fave recipe that you want to keep?  No worries!  Create a new smoothie card and it will stay even after you refresh the page!
+6) The search bar allows you to get to your smoothie cards without scrolling down the page - a few keystrokes with a click on the "Search" button can bring up relative matches based on the input characters.  You can then select the desirable smoothie card to recall the recipe.  What was that smoothie you made last week?  Found a new fave recipe that you want to keep?  No worries!  Create a new smoothie card and it will stay even after you refresh the page!
 
 ![searchBar](https://user-images.githubusercontent.com/74384669/117895863-231d3800-b274-11eb-9f28-7bc520880d46.PNG)
 
