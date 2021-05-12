@@ -29,7 +29,7 @@ Runs the app in the development mode.\
 
 ![homePage](https://user-images.githubusercontent.com/74384669/117894219-b6ed0500-b270-11eb-9257-8ab5196605b6.PNG)
 
-The homepage consists of a navbar, a welcome slogan, a search bar, and a few starter smoothie recipes for the new smoothie enthusiast!  The "View All" links users back to the homepage at any time.  You can create new smoothie cards and record your favorite smoothie recipes by clicking on "Create New."  Once created, smoothie cards populate the homepage in square tiles by smoothie names with latest additions at the end of the pool.  
+The homepage consists of a navbar, a welcome slogan, a search bar, and a few starter smoothie recipes for the new smoothie enthusiast!  The "View All" links you back to the homepage at any time.  You can create new smoothie cards and record your favorite smoothie recipes by clicking on "Create New."  Once created, smoothie cards populate the homepage in square tiles by smoothie names with latest additions at the end of the pool.  
 
 ![createNewPage](https://user-images.githubusercontent.com/74384669/117894346-03d0db80-b271-11eb-87d6-aa77d6e65aa8.PNG)
 
