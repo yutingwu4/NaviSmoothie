@@ -34,7 +34,7 @@ The homepage consists of a navbar, a welcome slogan, a search bar, and a few sta
 ![createNewPage](https://user-images.githubusercontent.com/74384669/117894346-03d0db80-b271-11eb-87d6-aa77d6e65aa8.PNG)
 
 
-5) Upon clicking on the smoothie cards, a window pops up displaying the smoothie name, ingredients, instructions, and notes, where users can make and save changes or delete the card altogether.  But remember!  As much as we would like to use fave names, we can only have unique names for our smoothie recipes collection!   
+5) Upon clicking on the smoothie cards, a window pops up displaying the smoothie name, ingredients, instructions, and notes, where users can make and save changes or delete the card altogether.  But remember!  As much as we would like to use our fave names, we can only have unique names for our smoothie recipes collection!   
 
 ![uniqueName](https://user-images.githubusercontent.com/74384669/117895725-d6d1f800-b273-11eb-8387-eb447c124abb.PNG)
 
