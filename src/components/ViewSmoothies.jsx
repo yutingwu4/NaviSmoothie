@@ -39,8 +39,9 @@ function ViewSmoothies({
 
   //traverse thru smoothie's array of objs to find potential matches
   const findSmoothieMatches = (input, smoothiesArray) => {
-    const regex = new RegExp(input, "gi"); //gi specifies to look globally and indifferently (not case-sensitive)
+    const regex = new RegExp(input, "gi"); //gi specifies to look globally and indifferently (case insensitive)
     return smoothiesArray.filter((drink) => drink.name.match(regex));
+    // return smoothiesArray.filter((drink) => drink.name.toLowerCase() === search.toLowerCase());
   };
 
   //display matching card
@@ -69,11 +70,12 @@ function ViewSmoothies({
       ));
       setRenderMatching(renderMatchCard);
       //clear input fields
-      e.target.reset();
+      // e.target.reset();
+      setSearch("");
     } else {
       alert(`Sorry, there are no matches for "${search}"!`);
       setRenderMatching(renderCards);
-      e.target.reset();
+      // e.target.reset();
     }
   };
 
