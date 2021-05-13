@@ -29,7 +29,7 @@ function SmoothieCard(props) {
   };
 
   //to delete card
-  const removeSmoothie = (id) => {
+  const removeSmoothie = () => {
     //find current card we want to delete
     const cardObj = props.smoothies.filter(
       (smoothie) => smoothie.id === props.id
@@ -48,7 +48,7 @@ function SmoothieCard(props) {
   };
 
   //to edit card
-  const saveChanges = (id) => {
+  const saveChanges = () => {
     const cardObj = {
       name: tempName,
       ingredients: tempIngredients,
