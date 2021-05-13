@@ -76,7 +76,7 @@ function SmoothieCard(props) {
               type="text"
               value={tempName}
               onChange={(e) => setTempName(e.target.value)}
-              id={props.id}
+              // id={props.id}
             />
           ) : (
             <Modal.Title>Smoothie: {props.name}</Modal.Title>
@@ -91,7 +91,7 @@ function SmoothieCard(props) {
                 type="text"
                 value={tempIngredients}
                 onChange={(e) => setTempIngredients(e.target.value)}
-                id={props.id}
+                // id={props.id}
               />
               <h5>Instructions:</h5>
               <textarea
@@ -99,7 +99,7 @@ function SmoothieCard(props) {
                 type="text"
                 value={tempInstructions}
                 onChange={(e) => setTempInstructions(e.target.value)}
-                id={props.id}
+                // id={props.id}
               />
               <h5>Notes:</h5>
               <textarea
@@ -107,7 +107,7 @@ function SmoothieCard(props) {
                 type="text"
                 value={tempNotes}
                 onChange={(e) => setTempNotes(e.target.value)}
-                id={props.id}
+                // id={props.id}
               />
             </div>
           ) : (
