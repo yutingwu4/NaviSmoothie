@@ -115,7 +115,7 @@ function SmoothieCard(props) {
               ingredients={props.ingredients}
               instructions={props.instructions}
               notes={props.notes}
-              id={props.id}
+              // id={props.id}
             />
           )}
         </Modal.Body>
