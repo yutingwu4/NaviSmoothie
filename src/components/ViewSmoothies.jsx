@@ -70,12 +70,10 @@ function ViewSmoothies({
       ));
       setRenderMatching(renderMatchCard);
       //clear input fields
-      // e.target.reset();
       setSearch("");
     } else {
       alert(`Sorry, there are no matches for "${search}"!`);
       setRenderMatching(renderCards);
-      // e.target.reset();
     }
   };
 
