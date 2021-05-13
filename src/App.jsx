@@ -37,7 +37,7 @@ function App() {
       setSmoothies(temp);
       setNewId(newId); 
       // setNewId(newId + 1); //every time we add card, generate new id
-      alert("Card successfully added!");
+      alert("Card successfully added!  Redirecting to home page.");
       window.location.href = "/NaviSmoothie/";
     }
   };
