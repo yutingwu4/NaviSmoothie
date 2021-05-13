@@ -13,7 +13,8 @@ function SmoothieForm(props) {
   const [notes, setNotes] = useState("");
 
   //onChange event handler to update state when key is pressed in input field
-  //by default HTML/JS manually re-renders entire page whenever form is submitted, React only re-renders components that changed
+  //by default HTML/JS manually re-renders entire page whenever form is submitted, 
+  //React only re-renders components that changed
 
   const submitForm = (event) => {
     event.preventDefault();
