@@ -44,11 +44,6 @@ function App() {
 
   //to delete a smoothie card
   const deleteCard = (card) => {
-    // let temp = [...smoothies];
-    // let indexToRemove = temp.indexOf(card);
-    // temp.splice(indexToRemove, 1);
-    // setSmoothies(temp);
-
     const temp = [...smoothies];
     let tempMap = temp.filter((el) => el.id === card.id);
     let indexToRemove = temp.indexOf(tempMap[0]);
