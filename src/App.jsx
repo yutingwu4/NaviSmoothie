@@ -5,7 +5,7 @@ import ViewSmoothies from "./components/ViewSmoothies";
 import NavBar from "./components/NavBar";
 import MockData from "./../src/components/mockData";
 import useLocalStorage from "./../src/components/assets/useLocalStorage";
-// const { v4: uuidv4 } = require("uuid");
+const { uuid } = require('uuidv4');
 
 /**
  * @terms
@@ -31,11 +31,12 @@ function App() {
     if (!isUniqueName(newCard.name)) {
       alert("This name is already taken! Please enter a unique name.");
     } else {
-      let temp = [...smoothies];
-      // const newId = uuidv4();
+      const temp = [...smoothies];
+      const newId = uuid();
       temp.push(newCard);
       setSmoothies(temp);
-      setNewId(newId + 1); //every time we add card, generate new id
+      setNewId(newId); 
+      // setNewId(newId + 1); //every time we add card, generate new id
       alert("Card successfully added!");
       window.location.href = "/NaviSmoothie/";
     }
@@ -48,12 +49,12 @@ function App() {
     // temp.splice(indexToRemove, 1);
     // setSmoothies(temp);
 
-    let temp = [...smoothies];
+    const temp = [...smoothies];
     let tempMap = temp.filter((el) => el.id === card.id);
     let indexToRemove = temp.indexOf(tempMap[0]);
     temp.splice(indexToRemove, 1);
     setSmoothies(temp);
-    window.location.href = "/NaviSmoothie/"; //refreshes the page
+    // window.location.href = "/NaviSmoothie/"; //refreshes the page
   };
 
   //to edit name, must check unique name against itself
